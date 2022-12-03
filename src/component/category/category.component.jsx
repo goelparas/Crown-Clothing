@@ -13,11 +13,7 @@ const Category = ({category}) => {
                                  <p>Shop</p>
                             </div>
                     </div>
-                   
-                
-            
-            
-       
+                     
     )
 }
 export default Category;

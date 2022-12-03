@@ -1,6 +1,5 @@
-
-import CategoryItem from "../category/074 categories.json"
-import Category from "../category/category.component";
+import CategoryItem from "../Category/074 categories.json"
+import Category from "../Category/category.component";
 
 const Directory = () => {
     return (
