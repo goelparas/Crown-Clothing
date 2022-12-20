@@ -12,12 +12,7 @@ const Directory = () => {
                     )
                 })}
             </div>
-            
         </div>
-
-
-
-
     )
 
 }

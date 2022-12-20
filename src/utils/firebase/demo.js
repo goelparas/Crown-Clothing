@@ -5,23 +5,39 @@ let doc = {
 }
 dep ="Cs";
 
-// const {...otherprops}=  doc;
+// // // const {...otherprops}=  doc;
 
-let names  = " "
+// // let names  = "chetan "
 
-// console.log({names ,...doc}); 
+// // // console.log({names ,...doc}); 
 
+// display(doc);
 
+// console.log(doc.names)
+// // // {}  used for destructuring and passing as an object too 
 
-
-
-
-// function display (addinfo={})
+// function display (doc)
 // {
-   
-//   console.log(addinfo)
-// console.log({dep,...addinfo});
+//    doc.names  = "Shubh"
+//   console.log();
+
 
 // }
 
+// // // const value  ={doc , names};
+
+
+
+// // // value.doc.dresscode ="IIT";
+
+// // // console.log(value);
+
+
+
+
+
+let {dresscode} = doc;
+
+dresscode = "IIT";
+console.log(doc.dresscode);
 
