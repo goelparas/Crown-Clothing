@@ -95,7 +95,7 @@ export const getCollectionAndDoc =async()=>{
    // console.log("THIS IS QUERY ",_query);
 
    const _querysnapShot = await getDocs(_query);
-   // console.log("THIS IS QUERYSNAPSHOT ",_querysnapShot);
+   console.log("THIS IS QUERYSNAPSHOT ",_querysnapShot);
 
    const categoryMap = _querysnapShot.docs.reduce((acc,_docSnapShot)=>{
    const   {title, items}   =  _docSnapShot.data();
@@ -105,7 +105,7 @@ export const getCollectionAndDoc =async()=>{
    },{});
    
 
-   console.log(categoryMap);
+   console.log(_querysnapShot.docs);
 
 return categoryMap;
 

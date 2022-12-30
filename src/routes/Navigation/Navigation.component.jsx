@@ -1,5 +1,5 @@
 import { Fragment, useContext} from "react";
-import { Outlet, Link} from "react-router-dom";
+import { Outlet, Link, useNavigate} from "react-router-dom";
 import { UserContext } from "../../component/Context/user-context.component";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { CartContext } from "../../component/Context/CartContext";
@@ -11,17 +11,19 @@ import CartIcon from "../../component/Cards/Cart-Icon/Cart-Icon.component";
 const Navigation = () => {
     const { currentUser ,setcurrentUser} = useContext(UserContext);
     const {Toogle} = useContext(CartContext);
-
+    const navigation = useNavigate();
     const signOutHandler =async ()=>{
             await signOutUser();   
             setcurrentUser(null);
     }
-
+    const gotoHome =()=>{
+        return navigation("/");
+    }
     return (
         <Fragment>
             <div className="navigation">
                 <div className="logo-container">
-                    <CrownLogo className="logo" />
+                    <CrownLogo className="logo" onClick={gotoHome}/>
                 </div>
                 <div className=" nav-links-container">
                     <Link className="nav-link" to="/shop">Shop</Link>
