@@ -1,17 +1,14 @@
 
 
-import "../form/form.style.scss"
+import "./form.style.scss"
 const Form =({label ,...otherprops})=>{
 
     
 
     return (
-        <div className="group">
-             
+        <div className="group">    
          <label >{label}</label>
          <input  className='form-input' {...otherprops} />
-        
-             
         </div>
     )
 }

@@ -1,0 +1,20 @@
+.single-category-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+ 
+  .title {
+    font-size: 2rem;
+    cursor: pointer;
+    
+  }
+  h2{
+    text-align: center;
+  }
+  .preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+}

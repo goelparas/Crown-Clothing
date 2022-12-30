@@ -1,23 +1,24 @@
-*{
-  // font-family: 'Dosis', sans-serif;
-
-  font-family: 'Lato', sans-serif;
-
-  // font-family:  sans-serif;
+root{
+font-size: 10px;
 }
 .navigation {
-    height: 70px;
+    height: 8rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+   
    
     .logo-container 
     {
       height: 100%;
-      width: 70px;
-      padding: 25px;
+      width: 9rem;
+      padding: 2.5rem;
+      .logo{
+       height: 5rem;
+       width: 5rem;
+      }
     } 
+    
     
 
     .nav-links-container 
@@ -29,8 +30,9 @@
       justify-content: flex-end;
       .nav-link 
       {
-        font-family: sans-serif;  
-        padding: 10px 15px;
+       
+        font-size: 1.4rem; 
+        padding: 1rem 1.5rem;
         cursor: pointer;
         text-decoration: none;
       }

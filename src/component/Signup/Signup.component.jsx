@@ -2,7 +2,7 @@
 import { useState ,useContext } from "react";
 import { DocumentFromAuth, createUserWithEmailAndPasswordAuth } from "../../utils/firebase/firebase.utils"
 import Button from "../Button/Button.component";
-import Form from "../form/form.component";
+import Form from "../Form/form.component";
 import "./Signup.component.scss"
 import { UserContext } from "../Context/user-context.component";
 
@@ -22,15 +22,16 @@ const Signup = () => {
         const { value, name } = event.target;
         setformField({ ...formField, [name]: value })
     }
+
     const CreateAccount = async (event) => {
 
         event.preventDefault();   // prevent event to make the default behavior like forms reload the page which is not ok for auth   // console.log(event.target) // this print the whole forms object containing every field in it 
         if (password !== ConfirmPassword || email === "" || displayName === "") {
             alert("Fill the form correctly ");
             return
-
         }
-            let { user } = await createUserWithEmailAndPasswordAuth(email, password);
+           
+        let { user } = await createUserWithEmailAndPasswordAuth(email, password);
             setcurrentUser(user);
 
          try {
@@ -51,8 +52,8 @@ const Signup = () => {
 
     return (
         <div className="sign-up-container">
-            <h2> Don't have an account?</h2>
-            <span> <h3>Sign up for the email address</h3></span>
+            <h1> Don't have an account?</h1>
+            <span> <p>Sign up for the email address</p></span>
             <form onSubmit={CreateAccount}>
                 <Form type="text" value={displayName} name="displayName" onChange={handleChange} label="Name" />
                 <Form type="password" value={password} name="password" onChange={handleChange} label="Password" />

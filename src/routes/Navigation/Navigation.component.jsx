@@ -1,18 +1,14 @@
-import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Fragment, useContext} from "react";
+import { Outlet, Link} from "react-router-dom";
 import { UserContext } from "../../component/Context/user-context.component";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { CartContext } from "../../component/Context/CartContext";
 import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
 import DropDown from "../../component/Cards/Drop-Down/DropDown.component";
 import "./navigation.styles.scss";
-import CardIcon from "../../component/Cards/Card-Icon/Card-Icon.component";
-
-
-
+import CartIcon from "../../component/Cards/Cart-Icon/Cart-Icon.component";
 
 const Navigation = () => {
-
     const { currentUser ,setcurrentUser} = useContext(UserContext);
     const {Toogle} = useContext(CartContext);
 
@@ -40,7 +36,7 @@ const Navigation = () => {
                                 <Link className="nav-link" to="/auth">Sign-in</Link>
                             )
                     }
-                    <CardIcon />
+                    <CartIcon />
                 </div>
                 {
                     Toogle? ( <DropDown/>) :(<Fragment/>)

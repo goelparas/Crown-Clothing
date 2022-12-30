@@ -2,7 +2,7 @@ import Button from "../Button/Button.component";
 import { signInGooglePopup,signInUserWithMailandPassword } from "../../utils/firebase/firebase.utils";
 import "../Signin/Signin.styles.scss";
 import { useState } from "react";
-import Form from "../form/form.component";
+import Form from "../Form/form.component";
 
 
 let defaultField = {
@@ -64,19 +64,18 @@ const Signin = () => {
     return (
 
          <div className="sign-in-container">
-            <div> 
+            
             <h2> Already have an account ?</h2>
-            <h2> Sign-in Here</h2>
+            <span> Sign-in Here</span>
             <form onSubmit={SignInEmailandPass}>
             <Form type="email" value={Email} onChange={handleChange} name="Email" label={"Email"}/>
             <Form type= "password" value={Password} onChange={handleChange} name="Password" label={"Password"}/>
-            <Button type="submit" buttontype={"Sign in"} />
-            </form>       
-            </div>
             <div className="buttons-container">
+            <Button type="submit" buttontype={"Sign in"} />
             <Button  type="button" onClick={SignInGoogleuser} buttontype={"Google"} />
             </div>     
-            </div>
+            </form>  
+            </div>     
             )
 }
             export default Signin;

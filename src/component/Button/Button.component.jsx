@@ -12,7 +12,7 @@ const BUTTON_TYPE_HANDLER = {
 const Button =({buttontype, ...otherprops})=>{
     return (
         
-         <button className={`button-container ${BUTTON_TYPE_HANDLER[buttontype]}`} {...otherprops}>{buttontype}</button>
+         <button   className={`button-container ${BUTTON_TYPE_HANDLER[buttontype]}`} {...otherprops}>{buttontype}</button>
         
     )
 }

@@ -1,4 +1,5 @@
 import {initializeApp} from "firebase/app";
+
 import { getAuth,
    GoogleAuthProvider,
    signInWithPopup,
@@ -6,9 +7,9 @@ import { getAuth,
    signInWithEmailAndPassword,
    signOut,
    onAuthStateChanged   
-}
-      from "firebase/auth";
-import { doc ,  getFirestore, setDoc,getDoc,   } from "firebase/firestore";
+}from "firebase/auth";
+
+import { doc ,  getFirestore, setDoc,getDoc,collection ,writeBatch, query, getDocs} from "firebase/firestore";
 
 
 const firebaseConfig =
@@ -29,14 +30,14 @@ provider.setCustomParameters(                                   // this will int
       prompt: 'select_account'
    }
 )
-//                                      INITIALISE                                                                
+//                                       INITIALISE                                                                
 
 //                                                                    console.log(app ,"this is the application ") 
 const app = initializeApp(firebaseConfig);                           // Connnect to firebase 
 export const db = getFirestore();                                    // Intialise DataBase 
 export const auth = getAuth(app);                                    //  intialise Autherization 
 
-//                                     sign in with Google 
+//                                     Sign in with Google 
 
 export const signInGooglePopup = () => {
    return signInWithPopup(auth, provider);                          // auth me check kro if provider is present then give the information  and if not present make one
@@ -63,6 +64,52 @@ export const DocumentFromAuth = async (userAuth, additonalinfo = {}) =>     //  
    }
    return docRef;
 }
+//                                              Collections
+// create a collection and add document in it;
+
+export const addCollectionAndDocuments = async (collectionkey, ObjectsToAdd)=>{
+   const collectionRef =collection(db,collectionkey);
+   const batch = writeBatch(db);
+
+   ObjectsToAdd.forEach((item)=>{
+      // console.log(item) ;
+
+   const documentRef = doc(collectionRef, item.title.toLowerCase());
+   batch.set(documentRef,item); // 
+
+   });
+
+  await batch.commit();
+  console.log("Done");
+
+
+
+}
+
+// Retrieve the data 
+export const getCollectionAndDoc =async()=>{
+   const collectionRef = collection(db,"category");
+   // console.log(collectionRef ,"THIS IS COLLECTION REF");
+
+   const _query = query(collectionRef);
+   // console.log("THIS IS QUERY ",_query);
+
+   const _querysnapShot = await getDocs(_query);
+   // console.log("THIS IS QUERYSNAPSHOT ",_querysnapShot);
+
+   const categoryMap = _querysnapShot.docs.reduce((acc,_docSnapShot)=>{
+   const   {title, items}   =  _docSnapShot.data();
+      acc[title.toLowerCase()] = items;
+      return acc;
+
+   },{});
+   
+
+   console.log(categoryMap);
+
+return categoryMap;
+
+}
 
 export const signInUserWithMailandPassword = async (email, password) => {
 
@@ -84,11 +131,9 @@ export const createUserWithEmailAndPasswordAuth = async (email, password) => {
 
 }
 
-   //                                                  SignOut feature
+//                                              SignOut feature
 export const signOutUser=async  ()=>{
-
    return await signOut(auth);
-
 }
 
 export const authStateChange =(callback)=>{ 

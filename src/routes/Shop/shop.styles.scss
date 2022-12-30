@@ -1,28 +1,27 @@
-.products-container{
-display: grid;
-grid-template-columns: repeat(4,auto);
-column-gap: 1rem;
-row-gap: 1.5rem;
 
-} 
-body {
-    margin: 0;
-    padding: 0 2rem;
-    font-family: 'Open Sans Condensed', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
+    body {
+        margin: 0;
+        padding: 0 3rem;
+       
+        font-family: 'Fira Sans Condensed', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      code {
+     
+        font-family: 'Amatic SC', cursive;
+
+        font-family: 'Fira Sans Condensed', sans-serif;
+
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
