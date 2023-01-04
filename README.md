@@ -1,18 +1,18 @@
-Welcome to our React e-commerce website repository!
+# Welcome to our React e-commerce website repository!
 This website is a single page application (SPA) built using. It allows users to browse view their order history, and sign-in . The website also includes a responsive design and is optimized for mobile devices.
 
-Tech-Stack includes
-ReactJs 
-FireBase
-Sacss 
-Some notable features of the website include:
+## Tech-Stack includes
+   ReactJs 
+   FireBase
+   Sacss 
+## Some notable features of the website include:
 
-Product browsing 
-Shopping cart and checkout flow
-[Firebase Authentication ]
+    Product browsing 
+    Shopping cart and checkout flow
+    [Firebase Authentication ]
 How to use ? run command npm start website will open in your localhost port
 
-Getting started with the contribution in the project
+## Getting started with the contribution in the project
    fork the project 
    git clone  
    https://github.com/goelparas/Ecommerce-application.git
