@@ -1,4 +1,4 @@
-$sub-color: grey;
+$sub-color: rgb(0, 0, 0);
 $main-color: black;
 
 .group {
@@ -7,34 +7,30 @@ $main-color: black;
 
   .form-input {
     background: none;
-    background-color: white;
+    background-color: rgb(226, 226, 226);
     color: $sub-color;
     font-size: 1.6rem;
-    padding: 10px 10px 10px 5px;
+    padding: 1rem 0;
     display: block;
-    width: 100%;
+    width: 80%;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $sub-color;
-    margin: 25px 0;
-
-    &:focus {
-      outline: none;
-    }
-
-    
+    margin: 2.5rem 0;    
   }
 
-  .form-input-label {
-    color: $sub-color;
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 300ms ease all;
+ 
 
-   
-  }
+.form-input-label {
+font-size: 1.5rem;
+}
+}
+
+@media(max-width:550){
+.form-input{
+  margin: 3rem 0;
+}
+.group{
+  margin: 3rem 0;
+}
 }

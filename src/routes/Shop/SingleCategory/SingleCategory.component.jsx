@@ -10,7 +10,8 @@ const SingleCategory = ()=>
     const {xyz} = useParams();
     const {categories} = useContext(CategoryContext);
     const product  = categories[xyz];
-    console.log(categories);
+
+    // console.log(categories);
 
     return (
       <div className="single-category-container">

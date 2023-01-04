@@ -18,8 +18,8 @@ const ProductCard= ({product})=>{
                 <img src={product.imageUrl} alt={product.name}/>
                 <Button buttontype="AddtoCart" onClick={addproduct}  />
                 <div className="footer">
-                <span>{product.name}   </span>
-                <span>{`${product.price}`}   </span>
+                   <span>{product.name}</span>
+                  <span>{product.price}</span>   
                 </div>
                 </div>
                 )

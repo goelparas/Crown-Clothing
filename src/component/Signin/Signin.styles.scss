@@ -1,12 +1,16 @@
 .sign-in-container {
     display: flex;
     flex-direction: column;
-    
- 
-    .buttons-container {
-      display: flex;
-      justify-content: space-between;
-    }
+    flex:1;
+    font-size: 1.5rem;
+
+.buttons-container{
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}    
   }
 
   

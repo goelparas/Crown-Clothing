@@ -1,43 +1,54 @@
-root{
-font-size: 10px;
-}
 .navigation {
-    height: 8rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-   
-   
-    .logo-container 
-    {
-      height: 100%;
-      width: 9rem;
-      padding: 2.5rem;
-      .logo{
-       height: 5rem;
-       width: 5rem;
-       cursor: pointer;
-      }
-    } 
-    
-    
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-    .nav-links-container 
-    {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      .nav-link 
-      {
-       
-        font-size: 1.4rem; 
-        padding: 1rem 1.5rem;
-        cursor: pointer;
-        text-decoration: none;
-      }
+  .logo-container {
+    height: 100%;
+    width: 9rem;
+    padding: 2.5rem;
+
+    .logo{
+      height: 7rem;
+      width: 7rem;
+      cursor: pointer;
     }
-   
 }
+
+ .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      font-size: 2rem;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+}
+
+@media (max-width:600px)
+{
+  :root{
+    font-size: 9px;
+  }
   
+}
+@media (max-width:450px)
+{
+  :root{
+    font-size: 8px;
+  }
+  
+}
+@media (max-width:368){
+  :root{
+    font-size: 5px;
+  }
+}

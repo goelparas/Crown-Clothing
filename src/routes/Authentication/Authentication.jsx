@@ -1,6 +1,4 @@
 
-
-
 import Signup from "../../component/Signup/Signup.component";
 import Signin from "../../component/Signin/Signin.component"
 import "./Auth.styles.css"
@@ -30,7 +28,7 @@ const Authentication = () => {
     // }
     return (
         <div className="Auth-container">
-            <Signin  />
+             <Signin />
              <Signup/>
         </div>
     )

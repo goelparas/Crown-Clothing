@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from './component/Context/user-context.component';
 import { CategoryProvider } from './component/Context/Product.context';
 import CartProvider from './component/Context/CartContext';
-
+import "./index.scss"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

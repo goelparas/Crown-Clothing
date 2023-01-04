@@ -1,4 +1,4 @@
-import { Fragment, useContext} from "react";
+import { Fragment, useContext,useEffect} from "react";
 import { Outlet, Link, useNavigate} from "react-router-dom";
 import { UserContext } from "../../component/Context/user-context.component";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
@@ -12,6 +12,15 @@ const Navigation = () => {
     const { currentUser ,setcurrentUser} = useContext(UserContext);
     const {Toogle} = useContext(CartContext);
     const navigation = useNavigate();
+
+    useEffect(() => {
+     if(currentUser!=null)
+     {
+        navigation("/");
+
+     }
+    }, [currentUser])
+    
     const signOutHandler =async ()=>{
             await signOutUser();   
             setcurrentUser(null);
@@ -19,6 +28,7 @@ const Navigation = () => {
     const gotoHome =()=>{
         return navigation("/");
     }
+
     return (
         <Fragment>
             <div className="navigation">
@@ -47,7 +57,9 @@ const Navigation = () => {
             </div>
                     
             <div>
-                <Outlet />
+            <br/>
+            <br/>
+                 <Outlet />
             </div>
         </Fragment>
     )

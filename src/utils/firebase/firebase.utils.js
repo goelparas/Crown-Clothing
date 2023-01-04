@@ -54,12 +54,12 @@ export const DocumentFromAuth = async (userAuth, additonalinfo = {}) =>     //  
       const { email, displayName } = userAuth;
       const createdAt = new Date();
       try {
-         console.log(additonalinfo);
+         // console.log(additonalinfo);
          await setDoc(docRef, { displayName, email, createdAt, ...additonalinfo });
 
       }
       catch (error) {
-         console.log("error in creating the user ", error)
+         // console.log("error in creating the user ", error)
       }
    }
    return docRef;
@@ -80,7 +80,7 @@ export const addCollectionAndDocuments = async (collectionkey, ObjectsToAdd)=>{
    });
 
   await batch.commit();
-  console.log("Done");
+//   console.log("Done");
 
 
 
@@ -105,7 +105,7 @@ export const getCollectionAndDoc =async()=>{
    },{});
    
 
-   console.log(_querysnapShot.docs);
+   // console.log(_querysnapShot.docs);
 
 return categoryMap;
 
@@ -126,7 +126,7 @@ export const createUserWithEmailAndPasswordAuth = async (email, password) => {
    }
    catch (error) 
    {
-      console.log(error.message)
+      // console.log(error.message)
    }
 
 }

@@ -6,7 +6,7 @@ const CartIcon = () => {
 
      const {Toogle,setToogle,cartCount} = useContext(CartContext);
      const  toogleHandler =()=>{
-        // console.log(Toogle);
+        
         setToogle(!Toogle);
      }
     return (

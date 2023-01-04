@@ -1,10 +1,34 @@
 
 .Auth-container{
-    margin: 0%;
+    margin: auto;
     padding: 0%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;    
+    flex: 1 1 ;
+    row-gap: 2rem;
+    column-gap: 4rem;
     
 }
+.Auth-container h1{
+    padding: 2rem 0;
+   
+}
+.Auth-container p{
+   font-size: 2rem;
+   
+}
+
+
+@media(max-width:870px)
+{
+ .Auth-container{
+    flex-direction: column;
+    justify-content: center;
+ }
+
+} 
+
 

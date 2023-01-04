@@ -19,12 +19,11 @@ const  CheckOutContainer  =()=>{
             <span className="header-block">Price</span>
             <span className="header-block">Delete</span>
             </div>
-          { cartItem.map((item)=>{
-
+            {cartItem.map((item)=>{
             return (<CheckOutItem key={item.id} product={item} changeQuantity={changeQuantity}/>)
             })
           }
-          <div className="total" >{ `TotalPrice----$${totalPrice }`}</div>
+          <div className="total" >{ `TotalPrice---$${totalPrice}`}</div>
         </div>
     )
 }

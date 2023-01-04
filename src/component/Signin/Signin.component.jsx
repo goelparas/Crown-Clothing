@@ -18,7 +18,7 @@ const Signin = () => {
     // Sign in with Google
 
     const SignInGoogleuser = async () => {
-    await signInGooglePopup();    
+        await signInGooglePopup();    
     }
 
     // Credential  handler 
@@ -65,13 +65,13 @@ const Signin = () => {
 
          <div className="sign-in-container">
             
-            <h2> Already have an account ?</h2>
-            <span> Sign-in Here</span>
+            <h1> Already have an account ?</h1>
+            <span> <p>Sign-in Here</p></span>
             <form onSubmit={SignInEmailandPass}>
             <Form type="email" value={Email} onChange={handleChange} name="Email" label={"Email"}/>
             <Form type= "password" value={Password} onChange={handleChange} name="Password" label={"Password"}/>
             <div className="buttons-container">
-            <Button type="submit" buttontype={"Sign in"} />
+            <Button type="submit" buttontype={"SignIn"} />
             <Button  type="button" onClick={SignInGoogleuser} buttontype={"Google"} />
             </div>     
             </form>  

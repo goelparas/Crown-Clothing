@@ -5,7 +5,7 @@
      row-gap: 2rem;
 
     .title {
-      font-size:2rem;
+      font-size:3.5rem;
       cursor: pointer;
     }
     h2{
@@ -16,6 +16,22 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       column-gap: 2rem;
+      row-gap: 1.5rem;
     }
   }
-  
+
+  @media(max-width:600px){
+
+   .category-preview-container  .preview
+   {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media(max-width:450px){
+
+    .category-preview-container  .preview
+    {
+       grid-template-columns: repeat(2,1fr);
+     }
+   }
+   

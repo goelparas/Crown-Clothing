@@ -1,15 +1,15 @@
 .checkout-item-container {
     width: 100%;
     display: flex;
-    min-height: 100px;
+    max-height:80vh;
     border-bottom: 1px solid darkgrey;
-    padding: 15px 0;
-    font-size: 20px;
+    padding: 1.5rem 0;
+    font-size: 2rem;
     align-items: center;
   
     .image-container {
       width: 23%;
-      padding-right: 15px;
+      padding-right: 1rem;
   
       img {
         width: 100%;
@@ -20,6 +20,7 @@
     .quantity,
     .price {
       width: 23%;
+      font-size: 1.7rem;
     }
   
     .quantity {
@@ -30,7 +31,7 @@
       }
   
       .value {
-        margin: 0 10px;
+        margin: 0 1rem;
       }
     }
   
@@ -40,5 +41,8 @@
       background-color: transparent;
       border: none;
     }
+  }
+  @media (max-width) {
+    
   }
   

@@ -1,17 +1,15 @@
 .button-container {
-    width: 165px;
-    width: auto;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 15px;
+    width: 16.5rem;
+    height: 4rem;
+    letter-spacing: 0.01rem;
+    padding: 0 3.5rem;
+    font-size: 1.75rem;
     background-color: black;
     color: white;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
-    font-weight: bolder;
+    font-weight:lighter;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     display: flex;
     margin: auto;
@@ -19,7 +17,7 @@
     &:hover {
       background-color: white;
       color: black;
-      border: 1px solid black;
+      border: 0.01rem solid black;
     }
   
     &.google-sign-in {
@@ -35,13 +33,29 @@
     &.inverted {
       background-color: white;
       color: black;
-      border: 1px solid black;
+      border: 0.01rem solid black;
   
       &:hover {
         background-color: black;
         color: white;
         border: none;
       }
+    }
+  }
+  
+  @media(max-width:1000px)
+  {
+    .button-container{
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+  @media(max-width:800px)
+  {
+    .button-container{
+      height: 2rem;
+      font-size: 1.2rem;
+      
     }
   }
   

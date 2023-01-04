@@ -3,14 +3,11 @@ import ProductCard from "../ProductCard/Product-Card.component"
 import "./category.preview.styles.scss"
 
 const CategoryPreview = ({products ,Title}) => {
-     
     return (
-
         <div className="category-preview-container">
-
-        <h2 >    
+         <h2>    
          <Link  className="title" to={`${Title}`}>{Title.toUpperCase()}</Link>
-        </h2>
+         </h2>
         <div className="preview">
           { 
          products.filter(
