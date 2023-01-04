@@ -1,9 +1,5 @@
-
-
 import "./form.style.scss"
 const Form =({label ,...otherprops})=>{
-
-    
 
     return (
         <div className="group">    
