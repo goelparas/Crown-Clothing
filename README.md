@@ -13,9 +13,9 @@ This website is a single page application (SPA) built using. It allows users to 
 How to use ? run command npm start website will open in your localhost port
 
 ## Getting started with the contribution in the project
-   fork the project 
-   git clone  
-   https://github.com/goelparas/Ecommerce-application.git
-   create git branch -[branchname]
-   commit changes to branch and do pull request
+    fork the project 
+    git clone  
+    https://github.com/goelparas/Ecommerce-application.git
+    create git branch -[branchname]
+    commit changes to branch and do pull request
 Constantly working on improving the website and adding new features. If you have any ideas or find any bugs, open an issue or submit a pull request.Thanks
